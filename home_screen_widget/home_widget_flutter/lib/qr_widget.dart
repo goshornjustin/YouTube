@@ -17,7 +17,6 @@ class _QRWidgetConfigScreenState extends State<QRWidgetConfigScreen> {
   final TextEditingController _labelController = TextEditingController();
   bool _isUpdating = false;
 
-
   Future<void> _loadSavedData() async {
     final qrValue = await HomeWidget.getWidgetData<String>('qr_code_value');
     final label = await HomeWidget.getWidgetData<String>('qr_code_label');
@@ -145,7 +144,7 @@ class _QRWidgetConfigScreenState extends State<QRWidgetConfigScreen> {
     }
   }
 
-    @override
+  @override
   void initState() {
     super.initState();
     _loadSavedData();
@@ -186,9 +185,8 @@ class _QRWidgetConfigScreenState extends State<QRWidgetConfigScreen> {
                         const SizedBox(width: 8),
                         Text(
                           'How to Use',
-                          style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                                fontWeight: FontWeight.bold,
-                              ),
+                          style: Theme.of(context).textTheme.titleMedium
+                              ?.copyWith(fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
@@ -215,7 +213,6 @@ class _QRWidgetConfigScreenState extends State<QRWidgetConfigScreen> {
                 prefixIcon: Icon(Icons.qr_code_2),
               ),
               maxLines: 2,
-            
             ),
             const SizedBox(height: 16),
 
@@ -228,7 +225,6 @@ class _QRWidgetConfigScreenState extends State<QRWidgetConfigScreen> {
                 border: OutlineInputBorder(),
                 prefixIcon: Icon(Icons.label),
               ),
-            
             ),
             const SizedBox(height: 24),
 
@@ -236,9 +232,9 @@ class _QRWidgetConfigScreenState extends State<QRWidgetConfigScreen> {
             if (_qrValueController.text.isNotEmpty) ...[
               Text(
                 'Preview',
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
+                style: Theme.of(
+                  context,
+                ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
               Card(
@@ -250,9 +246,8 @@ class _QRWidgetConfigScreenState extends State<QRWidgetConfigScreen> {
                       if (_labelController.text.isNotEmpty) ...[
                         Text(
                           _labelController.text,
-                          style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                                fontWeight: FontWeight.bold,
-                              ),
+                          style: Theme.of(context).textTheme.titleLarge
+                              ?.copyWith(fontWeight: FontWeight.bold),
                         ),
 
                         const SizedBox(height: 12),
