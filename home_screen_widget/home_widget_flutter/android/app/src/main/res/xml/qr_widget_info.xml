@@ -9,5 +9,6 @@
     android:description="@string/widget_description"
     android:targetCellWidth="2"
     android:targetCellHeight="2"
-    android:maxResizeWidth="250dp"
-    android:maxResizeHeight="250dp" />
+    <!-- No maxResizeWidth/Height: the previous 250dp cap prevented the widget from
+         filling larger home screen areas. Let the launcher and the user decide the ceiling. -->
+    />
