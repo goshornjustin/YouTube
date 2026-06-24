@@ -59,6 +59,8 @@ class QRWidgetProvider : AppWidgetProvider() {
 
         val qrLabel = prefs.getString(QR_CODE_LABEL_KEY, "QR Code") ?: "QR Code"
         val imagePath = prefs.getString(QR_CODE_IMAGE_PATH_KEY, "") ?: ""
+        val qrValue = prefs.getString(QR_CODE_VALUE_KEY, "") ?: ""
+
 
         // Pick layout based on current widget width so the layout switches immediately
         // when the user resizes, not just on the next periodic update.
@@ -72,6 +74,7 @@ class QRWidgetProvider : AppWidgetProvider() {
 
         val views = RemoteViews(context.packageName, layout)
         views.setTextViewText(R.id.qr_label, qrLabel)
+        views.setTextViewText(R.id.qr_value, qrValue)
 
         if (imagePath.isNotEmpty() && File(imagePath).exists()) {
             // Two-pass decode: first read only the image dimensions (inJustDecodeBounds),

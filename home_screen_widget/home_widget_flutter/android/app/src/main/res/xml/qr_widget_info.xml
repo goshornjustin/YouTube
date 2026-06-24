@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- No maxResizeWidth/Height: the previous 250dp cap prevented the widget from
+     filling larger home screen areas. Let the launcher and the user decide the ceiling. -->
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
     android:minWidth="110dp"
     android:minHeight="110dp"
@@ -9,6 +11,4 @@
     android:description="@string/widget_description"
     android:targetCellWidth="2"
     android:targetCellHeight="2"
-    <!-- No maxResizeWidth/Height: the previous 250dp cap prevented the widget from
-         filling larger home screen areas. Let the launcher and the user decide the ceiling. -->
     />
