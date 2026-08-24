@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Dark-mode widget colors. Android automatically selects this file when the
-         system (or launcher) is in dark mode, making hard-coded #FFFFFF/#000000 unnecessary. -->
-    <color name="widget_background">#1E1E1E</color>
-    <color name="widget_stroke">#444444</color>
-    <color name="widget_text">#FFFFFF</color>
-</resources>

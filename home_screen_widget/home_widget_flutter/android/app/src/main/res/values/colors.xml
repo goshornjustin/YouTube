@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Light-mode widget colors. Paired with values-night/colors.xml so the widget
-         adapts to the launcher's dark theme without any runtime code changes. -->
-    <color name="widget_background">#FFFFFF</color>
-    <color name="widget_stroke">#E0E0E0</color>
-    <color name="widget_text">#000000</color>
-</resources>
